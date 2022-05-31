@@ -1,7 +1,11 @@
 # test-placement
 
-To test generatoring placements run
-`kustomize build --enable-alpha-plugins ./operators/`
+To test generatoring `Policies` and `Placements` run
+`kustomize build --enable-alpha-plugins .`
 
-This will produce error:
->Error: accumulating resources: accumulation err='accumulating resources from 'wookie/': '/var/home/bjarvis/src/acm-gitops/test-placement/operators/wookie' must resolve to a file': recursed merging from path '/var/home/bjarvis/src/acm-gitops/test-placement/operators/wookie': may not add resource with an already registered id: PlacementRule.v1.apps.open-cluster-management.io/dev.wookie-policies
+This will produce the two `PlacementRules` in ./placements along with the output from the Policy Generator which does not include the referenced placements.
+
+This will allow managaging the placement rules separate from the generated Policies.
+
+
+
