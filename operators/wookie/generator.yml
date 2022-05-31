@@ -8,7 +8,7 @@ policyDefaults:
   namespace: wookie-policies
   remediationAction: enforce
   placement:
-    placementRulePath: ../../placements/dev.yml
+    placementRuleName: dev
 policies:
   - name: wookie
     remediationAction: enforce
