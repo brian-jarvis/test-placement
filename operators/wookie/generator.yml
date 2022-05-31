@@ -1,0 +1,17 @@
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: wookie-policygenerator
+policyDefaults:
+  namespace: wookie-policies
+  remediationAction: enforce
+  placement:
+    placementRulePath: ../../placements/dev.yml
+policies:
+  - name: wookie
+    remediationAction: enforce
+    manifests:
+      - path: namespace.yml
+
